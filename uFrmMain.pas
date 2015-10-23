@@ -115,13 +115,10 @@ begin
  if not dmSock.client.Connected then
  begin
     //client.IOHandler.WriteLn( '123');
-    showmessage('Ikke forbundet');
+    showmessage('Not connected');
     exit;
  end;
  listbox1.Items.Text := itemstext;
-
- //vid := 1;
-
  for I := 0 to maxi-1 do
  for j := 0 to maxj-1 do
  begin
