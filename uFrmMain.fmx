@@ -1,0 +1,126 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'BattleShip'
+  ClientHeight = 551
+  ClientWidth = 827
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  object Header: TToolBar
+    Height = 40.000000000000000000
+    Width = 827.000000000000000000
+    object lbHeader: TLabel
+      Height = 15.000000000000000000
+      StyleLookup = 'toollabel'
+      Text = 'Slagskibe'
+      Width = 120.000000000000000000
+    end
+  end
+  object Footer: TToolBar
+    Align = alBottom
+    Height = 40.000000000000000000
+    Position.Y = 511.000000000000000000
+    StyleLookup = 'bottomtoolbar'
+    Width = 827.000000000000000000
+  end
+  object Panel1: TPanel
+    Height = 320.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 56.000000000000000000
+    Width = 320.000000000000000000
+    object ListBox1: TListBox
+      Touch.InteractiveGestures = [igPan]
+      Height = 41.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 344.000000000000000000
+      Visible = False
+      Width = 97.000000000000000000
+      object TListBoxItem
+        Height = 19.000000000000000000
+        Text = '5=1'
+        Width = 93.000000000000000000
+      end
+    end
+    object Button1: TButton
+      DisableFocusEffect = False
+      Height = 22.000000000000000000
+      Position.X = 681.000000000000000000
+      Position.Y = 379.000000000000000000
+      Text = 'Play again'
+      Width = 80.000000000000000000
+      OnClick = Button1Click
+    end
+    object Edit1: TEdit
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Position.X = 256.000000000000000000
+      Position.Y = 400.000000000000000000
+      Width = 129.000000000000000000
+      Height = 22.000000000000000000
+    end
+    object Button3: TButton
+      DisableFocusEffect = False
+      Height = 22.000000000000000000
+      Position.X = 632.000000000000000000
+      Position.Y = 408.000000000000000000
+      Text = 'Invite'
+      Width = 128.000000000000000000
+      OnClick = Button3Click
+    end
+  end
+  object Panel2: TPanel
+    Height = 320.000000000000000000
+    Position.X = 424.000000000000000000
+    Position.Y = 56.000000000000000000
+    Width = 320.000000000000000000
+  end
+  object Button2: TButton
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 416.000000000000000000
+    Position.Y = 464.000000000000000000
+    Text = 'Send message'
+    Width = 97.000000000000000000
+    OnClick = Button2Click
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [igPan]
+    AutoHide = False
+    Height = 50.000000000000000000
+    Position.X = 272.000000000000000000
+    Position.Y = 400.000000000000000000
+    Width = 241.000000000000000000
+    CanFocus = False
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    WordWrap = True
+  end
+  object Timer1: TTimer
+    Interval = 5000
+    Left = 400
+    Top = 304
+  end
+  object btnInvite: TButton
+    DisableFocusEffect = False
+    Enabled = False
+    Height = 22.000000000000000000
+    Position.X = 136.000000000000000000
+    Position.Y = 448.000000000000000000
+    Text = 'Invite'
+    Width = 80.000000000000000000
+    OnClick = btnInviteClick
+  end
+  object cbHosts: TComboBox
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    ItemIndex = -1
+    ListBoxResource = 'transparentlistboxstyle'
+    Position.X = 24.000000000000000000
+    Position.Y = 448.000000000000000000
+    Width = 100.000000000000000000
+    OnChange = cbHostsChange
+  end
+end
